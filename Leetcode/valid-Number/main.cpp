@@ -2,11 +2,11 @@
 class Solution {
 // test case :0054047e+6, 0e, e9, 12e1.2, +.8, .,  ,+2e8.0,
 runtime  8ms.
-// 1. skip the leading wsp;
+// 1. skip the leading whitespaces;
 // 2. check the leading sign;then count the amount of digit
 // 3. if it's is a point,check the is there exponent sign ahead;
 // 4. if it's exponent,check the previous digit count and next char is a sign or not
-// 3. skip the trailing white spaces till the end	
+// 3. skip the trailing whitespaces till the end	
 
 public:
 		bool isNumber(string s){
