@@ -1,4 +1,5 @@
 //return the last negative
+//it's O(NLOGN) space  and time complexity
 int helper2(vector<int> &nums, int left, int right)
 {
 	if(left  > right) return -1;
