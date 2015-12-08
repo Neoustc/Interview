@@ -11,7 +11,7 @@ so quick sort is suitable
 //return the first positive  num
 // 
 void flip(vector<int> &nums, int l, int mid ,int r){
-	reverse(nums.begin() + l, nums.begin() + mid);//second parameter is open bracket
+	reverse(nums.begin() + l, nums.begin() + mid);//second parameter is open bracket,this num will be in the front
 	reverse(nums.begin() + mid , nums.begin() + r + 1);
 	reverse(nums.begin() + l ,nums.begin() + r  + 1);
 }
