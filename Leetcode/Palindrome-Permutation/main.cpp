@@ -1,4 +1,5 @@
 Palindrome Permutation
+//http://www.cnblogs.com/jcliBlogger/p/4748554.html
 //https://leetcode.com/discuss/53180/1-4-lines-python-ruby-c-c-java?show=53180#q53180
 Problem Description:
 
