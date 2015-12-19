@@ -21,3 +21,13 @@ Backquotes calls the __repr__() , so the result would be a string rather than a 
 
 r[1:] = `n` 
 it replaces everything after the first element in r (or everything, in case r is empty) by just n
+
+——————————————————————————————————————————————————————————————————————————————————————————————
+enumerate(iterable, start=0)
+Return an enumerate object. iterable must be a sequence, an iterator, or some other object which supports iteration
+>>> seasons = ['Spring', 'Summer', 'Fall', 'Winter']
+>>> list(enumerate(seasons))
+[(0, 'Spring'), (1, 'Summer'), (2, 'Fall'), (3, 'Winter')]
+>>> list(enumerate(seasons, start=1))
+[(1, 'Spring'), (2, 'Summer'), (3, 'Fall'), (4, 'Winter')]
+
