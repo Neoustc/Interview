@@ -1,18 +1,18 @@
-// using binary search 
-// to avoid the overflow we can't use m * m < x; we need use divide.
-// initial the loop invariant is [1,x) when enter the while loop. since the l < r - 1; else if set l < r, low = mid will cause
-// infinite loop.
+//for newton method  you can approach the result from 1.0 or X-self;
 
+	int mySqrt_Newton(int x)
+	{
+		long r = x;
+		while(r * r > x)
+			r = (r + x / r) / 2;
+		return r;
+	}    
 
-int mySqrt(int x) {
-    	if (x == 0) return 0;
-    	int l = 1, r = x;
-    	while (l < r - 1)
-    	{
-    		int m = l + ((r - l) >> 1);
-    		if (x / m < m ) r = m;
-    		else if (x / m == m)  return m;
-    		else l = m; 
-    	}
-    	return l;
-    }
+def sqrt(self, x):
+	i = 1.0;
+	while(true):
+		j = (i + x / i) /2;
+		if(abs(i - j) < 0.0000005):
+			break;
+		i = j;
+	return int(j);
