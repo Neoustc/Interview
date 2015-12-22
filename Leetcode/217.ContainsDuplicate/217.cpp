@@ -23,7 +23,9 @@ public:
 //insert not constant time.
 
    return nums.size() > set<int>(nums.begin(), nums.end()).size();   
-   
+// one line code for python 
+  return len(nums) > len(set(nums))
+
  bool containsDuplicate(vector<int>& nums) {
         int n=nums.size();
        unordered_map<int,int>mp;
