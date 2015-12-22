@@ -1,4 +1,5 @@
 //QUCIK SORT ,ONE PASS SOLUTION 
+// faster 4ms
  class Solution {
 public:
    void sortColors(vector<int>& nums) {
