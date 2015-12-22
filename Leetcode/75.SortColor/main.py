@@ -8,7 +8,7 @@ def sortColors1(self, nums):
             c1 += 1
         else:
             c2 += 1
-    nums[:c0] = [0] * c0
+    nums[:c0] = [0] * c0 # c++ could use fill(begin, end, num) function
     nums[c0:c0+c1] = [1] * c1
     nums[c0+c1:] = [2] * c2
     
