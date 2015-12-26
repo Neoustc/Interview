@@ -1,3 +1,4 @@
+//http://blog.csdn.net/u010738052/article/details/50407889
 class Solution{
     public:
 	static string letter[] ;
