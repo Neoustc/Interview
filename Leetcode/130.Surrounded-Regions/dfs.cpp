@@ -1,4 +1,5 @@
 // dfs might overflow;
+// could don't need the visited vector
 OOOOOOOOOXX
 XXXXXXXXOXX
 XXOOOOOOOXX
