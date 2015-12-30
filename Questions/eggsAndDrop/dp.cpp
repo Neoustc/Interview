@@ -1,4 +1,5 @@
 //http://www.geeksforgeeks.org/dynamic-programming-set-11-egg-dropping-puzzle/
+ //when you know the minimum num the start floor is just that number th floor !
  //k ==> Number of floors
  //n ==> Number of Eggs
 //Minimum number of trials in worst case
