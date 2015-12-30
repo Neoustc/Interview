@@ -18,6 +18,7 @@ With multiple iterables, the iterator stops when the shortest iterable is exhaus
 
 `n`
 Backquotes calls the __repr__() , so the result would be a string rather than a int
+compute the “official” string representation of an object
 
 r[1:] = `n` 
 it replaces everything after the first element in r (or everything, in case r is empty) by just n
