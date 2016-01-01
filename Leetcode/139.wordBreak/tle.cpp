@@ -1,3 +1,6 @@
+str: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+dict : a, aa, aaaa,aaaaaaa,aaaaaaaaa;
+result : get tle 
 class Solution {
 public:
    bool wordBreak(string s, unordered_set<string>& wordDict) {
