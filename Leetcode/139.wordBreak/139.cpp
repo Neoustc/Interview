@@ -1,5 +1,29 @@
 class Solution {
 public:
+   bool wordBreak(string s, unordered_set<string>& wordDict) {
+    int n = s.size();
+ 	vector<bool> dp(n + 1);
+ 	dp[0] = 1;
+ 	for(int i = 1; i <= n; ++i)
+ 	{
+ 		for (int j = i - 1; j >= 0 ; j--)
+ 		{
+ 		    if (dp[j]){
+ 		           if (wordDict.count(s.substr(j, i - j)))
+ 		           {dp[i] = 1;
+ 		           break;
+ 		               
+ 		           }
+ 		    }
+ 		}
+ 	}
+ 	return dp[n];
+   }
+};
+
+
+class Solution {
+public:
     bool wordBreak(string s, unordered_set<string>& wordDict) {
         int n = s.length();
         vector<bool> dp(n + 1, false);
