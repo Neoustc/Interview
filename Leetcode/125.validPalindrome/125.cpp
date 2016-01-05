@@ -1,4 +1,16 @@
 // isalnum(c) judge a char is a alphanumeric  character or not
+// move two pointers from each end until they collide;
+// increment left if not alphanumeric
+// decrement right ....
+// turn them to the Upper case then compare!!
+
+
+// toupper(c) change the c to  upper letter 
+// tolower(c) change  		    lower 
+// isalnum() judge whether a c is num or alpha
+// The result is true if either isalpha or isdigit would also return true.
+
+// isdigit(),isalpha();
 class Solution {
 public:
     bool isPalindrome(string s) {
