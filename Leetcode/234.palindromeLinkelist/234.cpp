@@ -1,3 +1,4 @@
+// reverse the right half of the list and then compare it with the left half.
  bool isPalindrome(ListNode* head) 
  {
  	if (!head || !head -> next) return true;
