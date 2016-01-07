@@ -10,7 +10,7 @@
                 for(; n != null; n = n.next){
                     if(n.left != null){
                         tail.next = n.left;
-                        tail = tail.next;
+                        tail = tail.next;//tail and nexthead are not same now
                     }
 
                     if(n.right != null){
