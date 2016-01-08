@@ -32,3 +32,9 @@ Return an enumerate object. iterable must be a sequence, an iterator, or some ot
 >>> list(enumerate(seasons, start=1))
 [(1, 'Spring'), (2, 'Summer'), (3, 'Fall'), (4, 'Winter')]
 
+**************
+zip(*iterables)
+# zip('ABCD', 'xy') --> Ax By
+Make an iterator that aggregates elements from each of the iterables.
+Returns an iterator of tuples, where the i-th tuple contains the i-th element from each of the argument sequences or iterables.
+zip() in conjunction with the * operator can be used to unzip a list:
