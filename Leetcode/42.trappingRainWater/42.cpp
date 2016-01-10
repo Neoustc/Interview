@@ -9,7 +9,7 @@ int trap(vector<int>& height) {
         int left=0,right=n - 1;
         int res=0;
         int maxleft=0,maxright=0;
-        while(left<=right)
+        while(left<=right)//< works too, because in the end the two pointers will meet in the highest place
         {
         	if(height[left]<=height[right]){
         		if(height[left]>=maxleft)
