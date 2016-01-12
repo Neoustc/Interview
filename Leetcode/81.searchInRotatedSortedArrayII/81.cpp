@@ -2,6 +2,8 @@
 bool search(int A[], int n, int key) {
     int l = 0, r = n - 1;
     while (l <= r) {
+        //while (l < r && nums[l] == nums[l + 1]) l++; // skip duplicates from the left
+        //  while (r > l && nums[r] == nums[r - 1]) r--; // skip duplicates from the right
         int m = l + (r - l)/2;
         if (A[m] == key) return true; //return m in Search in Rotated Array I
         if (A[l] < A[m]) { //left half is sorted
