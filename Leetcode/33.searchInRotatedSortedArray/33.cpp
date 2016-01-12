@@ -18,7 +18,7 @@ public:
   	while (l < r)
   	{
   		int m = l + ((r - l ) >> 1);
-  		int newm = (m - offset) % n;
+  		int newm = (m - offset + n) % n;
   		if (nums[newm] < target) l = m + 1;
   		else if (nums[newm] > target) r = m;
   		else return newm;
