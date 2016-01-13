@@ -1,17 +1,19 @@
 //search from the top - right element and reduce the range for further searching by comparisons
 //between target and the current element. 
-bool searchMatrix(vector<vector<int> >& matrix, int target) 
-{
-	int m = matrix.size();
-	int n = m ? 0 : matrix[0].size();
-	int i = 0, j = n;
-	while (i <= m && j >= 0)
+class Solution {
+public:
+   bool searchMatrix(vector<vector<int> >& matrix, int target) {
+    int m = matrix.size();
+	int n = m ? matrix[0].size() : 0;
+	int i = 0, j = n - 1;
+	while (i < m && j >= 0)
 	{
 		if (matrix[i][j] == target)
 			return true;
 		else if (matrix[i][j] > target)
 			 j--;
-		else i ++;
+		else i++;
 	}
-	return true;
-}
+	return false;
+   }
+};
