@@ -1,6 +1,6 @@
 class Vector2D {
 private :
-	vector<vector<int> > iterator i, iEnd;
+	vector<vector<int> > ::iterator i, iEnd;
 	int j = 0;
 public:
     Vector2D(vector<vector<int>>& vec2d) {
