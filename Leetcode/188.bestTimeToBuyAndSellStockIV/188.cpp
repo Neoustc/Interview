@@ -1,43 +1,30 @@
- //https://leetcode.com/discuss/15153/a-clean-dp-solution-which-generalizes-to-k-transactions
- int maxProfit(int k, vector<int>& prices) 
-  {
-		if(prices.size()<=1)return 0;
-		int maxProfit = 0;
-		vector<vector<int> > dp (k + 1, vector<int>(prices.size()));
-		for (int kk = 1; kk <= k; kk++)
-		{
-			int tmpMax = dp[k - 1][0] - prices[0];
-			for (int ii = 0; ii < prices.size(); ++ii)
-			{
+class Solution {
+public:
+ int maxProfit(int k, vector<int>& prices) {
+    	int n = prices.size();
+    	if (n <= 1) return 0;
+    	if (k >= n / 2) return quicksolve(prices);
+    	vector< vector<int> > dp (k + 1, vector<int>(n));//put behind the quicksolve else runtime error
+    	for (int kk = 1; kk <= k; kk++)
+    	{
+    		int tmpMax = dp[kk - 1][0] - prices[0];
+    		for (int ii = 1; ii < n; ii++)
+    		{
+    			dp[kk][ii] = max(dp[kk][ii - 1], prices[ii] + tmpMax);
+    			tmpMax = max(tmpMax, dp[kk - 1][ii] - prices[ii]);	
+    		}
+    	}
+    	return dp[k][n - 1];
 
-				dp[kk][ii] = max (dp[kk][ii - 1], prices[ii] + tmpMax);
-				tmpMax = max(tmpMax, dp[kk - 1][ii] - prices[ii]);
-				maxProfit = max (maxProfit, dp[kk][ii]);
-			}
-		}
-		return maxProfit;
-  }
-  
-  **********************************************
-  int maxProfit(vector<int> &prices) {
-        // f[k, ii] represents the max profit up until prices[ii] (Note: NOT ending with prices[ii]) using at most k transactions. 
-        // f[k, ii] = max(f[k, ii-1], prices[ii] - prices[jj] + f[k-1, jj]) { jj in range of [0, ii-1] }
-        //          = max(f[k, ii-1], prices[ii] + max(f[k-1, jj] - prices[jj]))
-        // f[0, ii] = 0; 0 times transation makes 0 profit
-        // f[k, 0] = 0; if there is only one price data point you can't make any money no matter how many times you can trade
-        if (prices.size() <= 1) return 0;
-        else {
-            int K = 2; // number of max transation allowed
-            int maxProf = 0;
-            vector<vector<int>> f(K+1, vector<int>(prices.size(), 0));
-            for (int kk = 1; kk <= K; kk++) {
-                int tmpMax = f[kk-1][0] - prices[0];
-                for (int ii = 1; ii < prices.size(); ii++) {
-                    f[kk][ii] = max(f[kk][ii-1], prices[ii] + tmpMax);
-                    tmpMax = max(tmpMax, f[kk-1][ii] - prices[ii]);
-                    maxProf = max(f[kk][ii], maxProf);
-                }
-            }
-            return maxProf;
-        }
     }
+
+    int quicksolve(vector<int> & prices)
+    {
+    	int n = prices.size(), maxProfit = 0;
+    	for (int i = 1; i < n; ++i)
+    		if (prices[i] > prices[i - 1])
+    			maxProfit += prices[i] - prices[i - 1];
+    	return maxProfit;
+
+    }
+};
