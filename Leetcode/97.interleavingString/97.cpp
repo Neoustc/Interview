@@ -1,3 +1,7 @@
+// DP table represents if s3 is interleaving at (i+j)th position 
+// when s1 is at ith position, and s2 is at jth position. 
+// 0th position means empty string.
+//http://blog.csdn.net/u010738052/article/details/50534552
  bool isInterleave(string s1, string s2, string s3) 
  {
  	int m = s1.size();
