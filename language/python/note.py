@@ -38,3 +38,8 @@ zip(*iterables)
 Make an iterator that aggregates elements from each of the iterables.
 Returns an iterator of tuples, where the i-th tuple contains the i-th element from each of the argument sequences or iterables.
 zip() in conjunction with the * operator can be used to unzip a list:
+ 
+ *************************
+ Lambda expressions (sometimes called lambda forms) are used to create anonymous functions. 
+ The expression    ** lambda arguments: expression **    yields a function object. 
+ The unnamed object behaves like a function object defined with
