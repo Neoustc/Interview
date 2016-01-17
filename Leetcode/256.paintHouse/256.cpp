@@ -9,6 +9,7 @@ Note:
 All costs are positive integers.
 
 ************************************************
+//https://leetcode.com/discuss/51721/simple-java-dp-solution?show=51755#a51755
 int minCost(vector<vector<int>>& costs) {
         if (costs.empty()) return 0;
         int n = costs.size(), r = 0, g = 0, b = 0;
