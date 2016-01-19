@@ -13,6 +13,9 @@ public:
  		if (nums[mid] < target) low = mid + 1;//[low(mid + 1), high];
  		else high = mid;
  	}
- 	return low;
+ 	// low >= high , at this point
+ 	// low <= high; invariant 
+ 	// so : low = high; 
+ 	return low;// or return high; 
     }
 };
