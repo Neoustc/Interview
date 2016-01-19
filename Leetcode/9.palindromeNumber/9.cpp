@@ -6,7 +6,7 @@ public:
  {
  	//if (x < 0) return false;
  	//if ( 0 <= x &&  x < 10) return true;
- 	if (x < 0 || (x && !(x % 10))) return false;
+ 	//if (x < 0 || (x && !(x % 10))) return false; check whether the num is negative or could divide by 10, like 10, 190...
  	int p = 0;
  	int q = x;
  	while (q > 0)
