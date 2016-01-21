@@ -1,3 +1,6 @@
+//maintain a running maximum maxsum and a current summation sum.
+//when we visit each num in nums, add num to sum,then update the maxsum if necessary.
+//or reset the sum to 0 if  it becomes negative. 
 int maxSubArray(vector<int>& nums) 
 {
 	int n = nums.size();
