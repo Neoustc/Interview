@@ -1,6 +1,15 @@
 bool knows(int a, int b)
 int findCelebrity(int n) 
 {
+
+	 // int candidate = 0;
+
+  //   for(int i=1; i<n; i++){
+
+  //       if ( !knows(i,candidate) ){
+  //           candidate = i;
+  //       }
+  //   }
 	vector<int> candidates(n);
 	iota(candidates.begin(),candidates.end(), 0);
 	while (candidates.size() > 1)
