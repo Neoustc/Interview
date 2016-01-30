@@ -4,7 +4,7 @@ public:
     string serialize(TreeNode* root) {
         ostringstream out;
         serialize(root, out);
-        return out.str();
+        return out.str();//stream to string;
     }
 
     TreeNode* deserialize(string data) {
