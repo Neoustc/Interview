@@ -1,3 +1,4 @@
+//http://www.cnblogs.com/jcliBlogger/p/4807033.html
 class ZigzagIterator {
 private:
 	int p;
