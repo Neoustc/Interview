@@ -2,20 +2,20 @@
  testing whether a number is the largest of three: a < x > b
  a == b < c actually means a == b and b < c in python!
  
-***
+******************
 str.join(iterable)
 #Return a string which is the concatenation of the strings in the iterable iterable
 ex : ["->".join(["22","33","11"])]
 ['22->33->11']
 
-***
+**********************
 Map(function, iterable)
 Return an iterator that applies function to every item of iterable,
 yielding the results. If additional iterable arguments are passed, 
 function must take that many arguments and is applied to the items from all iterables in parallel. 
 With multiple iterables, the iterator stops when the shortest iterable is exhausted.
 
-
+**************************
 `n`
 Backquotes calls the __repr__() , so the result would be a string rather than a int
 compute the “official” string representation of an object
@@ -34,10 +34,16 @@ Return an enumerate object. iterable must be a sequence, an iterator, or some ot
 
 **************
 zip(*iterables)
-# zip('ABCD', 'xy') --> Ax By
+# zip('ABCD', 'xy') -->[ Ax By ]
 Make an iterator that aggregates elements from each of the iterables.
 Returns an iterator of tuples, where the i-th tuple contains the i-th element from each of the argument sequences or iterables.
 zip() in conjunction with the * operator can be used to unzip a list:
+#zip(*iterables)
+#Make an iterator that aggregates elements from each of the iterables.
+#s=Counter({'1': 1, '0': 1, '2': 1}) 
+#d=Counter({'1': 1, '0': 1, '3': 1})
+#zip (s,d)
+#[('1', '1'), ('0', '0'), ('2', '3')]
  
  *************************
  Lambda expressions (sometimes called lambda forms) are used to create anonymous functions. 
@@ -53,3 +59,10 @@ For example, reduce(lambda x, y: x+y, [1, 2, 3, 4, 5]) calculates ((((1+2)+3)+4)
 The left argument, x, is the accumulated value and the right argument, y, is the update value from the sequence. 
 If the optional initializer is present, it is placed before the items of the sequence in the calculation, and serves as a default when the sequence is empty. 
 If initializer is not given and sequence contains only one item, the first item is returned.
+
+*****************************
+collections.counter return a dict(key:value),
+It is an unordered collection where elements are stored as dictionary keys and their counts are stored as dictionary values
+for  counting the hashable obejects 
+collections.Counter("102")
+Counter({'1': 1, '0': 1, '2': 1})
