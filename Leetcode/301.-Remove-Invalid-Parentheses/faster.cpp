@@ -11,6 +11,8 @@ public:
  		while (!que.empty()) {
  			string tmp = que.front();
  			que.pop();
+ 			//because the two level string size will only differ 1,
+ 			//so if this level has valid string that must be even num size, so the next level won't have valid one.
  			if (isvalid(tmp)) 
  			 	{
  			 	    found = true;
