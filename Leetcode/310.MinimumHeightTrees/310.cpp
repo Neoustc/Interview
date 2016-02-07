@@ -15,7 +15,6 @@ vector<int> findMinHeightTrees(int n, vector<pair<int, int>>& edges)
     			leaves.push_back(i);
 
     while (n > 2) {
-    	n -= leaves.size();
     	vector<int> newLeaves;
     	for (int i : leaves)
     	{
@@ -23,6 +22,7 @@ vector<int> findMinHeightTrees(int n, vector<pair<int, int>>& edges)
     		graph[j].erase(i);
     		if (graph[j].size() == 1) newLeaves.push_back(j);
     	}
+    	n -= leaves.size();
     	leaves = newLeaves;
     }
     return leaves;
