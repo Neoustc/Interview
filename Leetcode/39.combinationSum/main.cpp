@@ -44,8 +44,8 @@ vector<vector<int> > combinationSum(vector<int>& candidates, int target) {
 				if (s.size() > 0)
 				{
 					for (auto& t : s)
-						t.push_back(num);
-						dp[j + num].insert(dp[j + num].end(), s.begin(), s.end());
+					     t.push_back(num);
+				dp[j + num].insert(dp[j + num].end(), s.begin(), s.end());
 
 				}
 			}
