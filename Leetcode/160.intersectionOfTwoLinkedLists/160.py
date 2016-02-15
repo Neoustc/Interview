@@ -1,3 +1,5 @@
+ #!= and == are for comparing values of a variable
+ #whereas "is not/is" is for comparing the id or memory address of the variable.  faster
 def getIntersectionNode(self, headA, headB):
 	p1 = headA
 	p2 = headB
