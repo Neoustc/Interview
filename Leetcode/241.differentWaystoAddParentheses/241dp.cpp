@@ -1,3 +1,4 @@
+//http://blog.csdn.net/u010738052/article/details/50695383
 class Solution {
 public:
  vector<int> diffWaysToCompute(string input) {
