@@ -1,3 +1,8 @@
+ // count the occurrency for each char;
+//traverse the char of string s, decrease the count of current char;
+//if the char is in the result, just skip the char, else if the char is smaller than 
+//the last char of the string, and the last char of string's count is still more than 1 time 
+// we could push the current char and pop out the last char of the result. 
  string removeDuplicateLetters(string s)
   {
   	int n = s.size();
