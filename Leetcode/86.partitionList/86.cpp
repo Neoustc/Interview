@@ -7,7 +7,7 @@
  	{
  		ListNode * next = head -> next;
  		head -> next = NULL;
- 		if (head -> val <= x)
+ 		if (head -> val < x)
  			{
  				p -> next = head;
  				p = p -> next;
