@@ -17,8 +17,8 @@ class WordDistance {
   	 	int i = 0, j = 0, dist = INT_MAX;
   	 	while (i < m && j < n)
   	 	{
-  	 		dist = min (dist, abs(indexs1[i] - indexs2[i]));
-  	 		if (indexs1[i] < indexs2[i]) i++;
+  	 		dist = min (dist, abs(indexs1[i] - indexs2[j]));
+  	 		if (indexs1[i] < indexs2[j]) i++;
   	 		else j++;
   	 	}
   	 	return dist;
