@@ -11,6 +11,7 @@ private:
         int rm = majority(nums, mid + 1, right);
         if (lm == rm) return lm;
         return counts(nums, lm) > counts(nums, rm) ? lm : rm;
+        //return count(nums.begin() + left, nums.begin() + right + 1, lm) > count(nums.begin() + left, nums.begin() + right + 1, rm) ? lm : rm;
     }
     int counts(vector<int>& nums, int elem) {
         int cnt = 0;
