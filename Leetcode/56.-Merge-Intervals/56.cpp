@@ -13,7 +13,7 @@ public:
     if (ins.empty()) return vector<Interval>{};
     vector<Interval> res;
     int n = ins.size();
-    sort(ins.begin(), ins.end(), [](Interval a, Interval b) {return a.start < b.start;});
+    sort(ins.begin(), ins.end(), [](Interval& a, Interval& b) {return a.start < b.start;});
     res.push_back(ins[0]);
     for (int j = 1; j < n; ++j)
 	    {	
