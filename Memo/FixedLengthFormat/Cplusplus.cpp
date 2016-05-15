@@ -14,4 +14,15 @@ sprintf(buffer, "%06d", n);
 string str(buffer);
 
 or 
-snprintf(buffer, 5, "%04d", 1);
+#include <cstdio>
+#include <iostream>
+
+int main() {
+    char buffer[5];
+    // Prints: 0001
+    snprintf(buffer, 5, "%04d", 1);
+    std::cout << buffer << '\n';
+    // Prints: 1234 (not the 5)
+    snprintf(buffer, 5, "%04d", 12345);
+    std::cout << buffer << '\n';
+}
