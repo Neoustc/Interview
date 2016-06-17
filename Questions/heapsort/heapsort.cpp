@@ -23,7 +23,7 @@ class Solution
 	}
 	void buildHeap(vector<int >&nums)
 	{
-		int heap_size=nums.size();
+		heap_size=nums.size();
 		for (int i = (heap_size/2-1); i >= 0; i--)/////
 		{
 			heapAdjust(nums,i);
@@ -33,18 +33,18 @@ class Solution
 		int left=2*i+1;
 		int right=2*i+2;
 		int max=i;
-			if(left<=heap_size&&nums[left]>nums[max])
+			if(left< heap_size&&nums[left]>nums[max])
 			{
 				max=left;
 			}	
-			if(right<=heap_size&&nums[right]>nums[max])
+			if(right< heap_size&&nums[right]>nums[max])
 			{
 				max=right;
 			}
 			if(max!=i)
 			{
 				swap(nums[i],nums[max]);//////
-				heapAdjust(nums,max);
+				heapAdjust(nums,max);//top down adjust
 			}
 		}
 private:
